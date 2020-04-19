@@ -1,4 +1,4 @@
-package com.clebersondev.employees;
+package com.myCompany.employees;
 
 public class Employee {
     public String name;

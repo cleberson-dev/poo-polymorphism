@@ -1,6 +1,10 @@
-package com.clebersondev;
+package com.myCompany;
 
-import com.clebersondev.employees.*;
+import com.myCompany.employees.Manager;
+import com.myCompany.employees.Secretary;
+import com.myCompany.employees.Employee;
+import com.myCompany.employees.Engineer;
+import com.myCompany.employees.Director;
 import java.util.ArrayList;
 
 public class Main {

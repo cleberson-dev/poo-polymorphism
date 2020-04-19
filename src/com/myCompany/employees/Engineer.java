@@ -1,4 +1,4 @@
-package com.clebersondev.employees;
+package com.myCompany.employees;
 
 public class Engineer extends Employee {
     public Engineer(String name, double salary) {

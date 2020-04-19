@@ -1,4 +1,4 @@
-package com.clebersondev.employees;
+package com.myCompany.employees;
 
 public class Secretary extends Employee {
     public Secretary(String name, double salary) {
