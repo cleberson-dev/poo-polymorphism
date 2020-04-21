@@ -7,7 +7,7 @@ public class Manager extends Employee {
 
     @Override
     protected double getBenefit() {
-        return 0.15;
+        return 0.1;
     }
 
     @Override

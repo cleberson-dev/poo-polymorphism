@@ -9,4 +9,9 @@ public class Secretary extends Employee {
     public String getPosition() {
         return "Secretário";
     }
+
+    @Override
+    protected double getBenefit() {
+        return 0.03;
+    }
 }

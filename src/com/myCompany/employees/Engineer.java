@@ -9,4 +9,9 @@ public class Engineer extends Employee {
     public String getPosition() {
         return "Engenheiro";
     }
+    
+    @Override
+    protected double getBenefit() {
+        return 0.05;
+    }
 }
