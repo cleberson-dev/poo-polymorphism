@@ -1,6 +1,6 @@
 package com.myCompany.employees;
 
-public class Employee {
+public abstract class Employee {
     public String name;
     private double salary;
 
@@ -13,9 +13,7 @@ public class Employee {
         return this.salary * (1 + this.getBenefit());
     }
 
-    protected double getBenefit() {
-        return 0.05;
-    }
+    protected abstract double getBenefit();
 
     public String getPosition() {
         return "Funcionário";
