@@ -13,24 +13,35 @@ public class SavingsAccount extends Account {
 
     @Override
     public void withdraw(double amount) throws Exception {
-        if (amount < 0) throw new Exception("");
-        if (amount > this.savingsBalance) throw new Exception("");
-
-        this.savingsBalance -= amount;
+        this.withdrawFromSavings(amount);
     }
 
     public void withdraw(String to, double amount) throws Exception {
         if (to.equals("poupança")) {
-            this.withdraw(amount);
+            this.withdrawFromSavings(amount);
             return;
         }
 
         if (to.equals("corrente")) {
-            super.withdraw(amount);
+            this.withdrawFromBalance(amount);
             return;
         }
 
         throw new Exception("Opção de saque inválida (Escolha entre 'corrente' ou 'poupança')");
+    }
+
+    private void withdrawFromBalance(double amount) throws Exception {
+        if (amount <= 0) throw new Exception("Valor inválido. Somente valores positivos diferentes de 0");
+        if (amount > this.balance) throw new Exception("Saldo insuficiente para saque de tal quantia.");
+
+        this.balance -= amount;
+    }
+
+    private void withdrawFromSavings(double amount) throws Exception {
+        if (amount < 0) throw new Exception("");
+        if (amount > this.savingsBalance) throw new Exception("");
+
+        this.savingsBalance -= amount;
     }
 
     @Override

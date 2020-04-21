@@ -16,6 +16,14 @@ public class StudentAccount extends Account {
     }
 
     @Override
+    public void withdraw(double amount) throws Exception {
+        if (amount <= 0) throw new Exception("Valor inválido. Somente valores positivos diferentes de 0");
+        if (amount > this.balance) throw new Exception("Saldo insuficiente para saque de tal quantia.");
+
+        this.balance -= amount;
+    }
+
+    @Override
     public void deposit(double amount) throws Exception {
         super.deposit(amount * 1.05);
     }

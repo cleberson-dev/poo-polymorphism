@@ -1,6 +1,5 @@
 package com.bank;
 
-import com.bank.accounts.Account;
 import com.bank.accounts.SavingsAccount;
 import com.bank.accounts.SpecialAccount;
 import com.bank.accounts.StudentAccount;
@@ -8,15 +7,6 @@ import com.bank.accounts.StudentAccount;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        Account myAccount = new Account(12345, "Cleberson Jr.", 250);
-        System.out.println(myAccount.summarize());
-        myAccount.deposit(500);
-        System.out.println(myAccount.summarize());
-        myAccount.withdraw(421);
-        System.out.println(myAccount.summarize());
-
-        System.out.println("--------");
-
         SavingsAccount mySavingsAccount = new SavingsAccount(12345, "Cleberson Jr.", 500);
         System.out.println(mySavingsAccount.summarize());
         mySavingsAccount.deposit(200);

@@ -1,7 +1,7 @@
 package com.bank.accounts;
 import java.lang.Exception;
 
-public class Account {
+public abstract class Account {
     protected int number;
     public String name;
     protected double balance;
@@ -14,12 +14,7 @@ public class Account {
         this.name = name;
     }
 
-    public void withdraw(double amount) throws Exception {
-        if (amount <= 0) throw new Exception("Valor inválido. Somente valores positivos diferentes de 0");
-        if (amount > this.balance) throw new Exception("Saldo insuficiente para saque de tal quantia.");
-
-        this.balance -= amount;
-    }
+    public abstract void withdraw(double amount) throws Exception;
 
     public void deposit(double valor) throws Exception {
         if (valor < 0) throw new Exception("");
