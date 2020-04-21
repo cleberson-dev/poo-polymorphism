@@ -10,15 +10,14 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-        ArrayList<Employee> funcionarios = new ArrayList<>();
-        funcionarios.add(new Employee("Cleberson", 1000));
-        funcionarios.add(new Engineer("Susan", 3100));
-        funcionarios.add(new Secretary("Lucas", 2542));
-        funcionarios.add(new Director("Velma", 5000));
-        funcionarios.add(new Manager("Antônio", 7503));
+        ArrayList<Employee> employees = new ArrayList<>();
+        employees.add(new Engineer("Susan", 3100));
+        employees.add(new Secretary("Lucas", 2542));
+        employees.add(new Director("Velma", 5000));
+        employees.add(new Manager("Antônio", 7503));
 
-        for (Employee funcionario : funcionarios) {
-            System.out.println(funcionario);
+        for (Employee employee : employees) {
+            System.out.println(employee);
         }
     }
     
