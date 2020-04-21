@@ -6,7 +6,7 @@ public class SavingsAccount extends Account {
 
     public SavingsAccount(int number, String name, double savingsBalance) throws Exception {
         super(number, name, 0);
-        if (savingsBalance < 0) throw new Exception("");
+        if (savingsBalance < 0) throw new Exception("Impossível criar conta (Saldo inicial deve ser maior que 0)");
 
         this.savingsBalance = savingsBalance;
     }
@@ -31,22 +31,22 @@ public class SavingsAccount extends Account {
     }
 
     private void withdrawFromBalance(double amount) throws Exception {
-        if (amount <= 0) throw new Exception("Valor inválido. Somente valores positivos diferentes de 0");
+        if (amount <= 0) throw new Exception("Valor inválido. Somente valores positivos diferentes de 0.");
         if (amount > this.balance) throw new Exception("Saldo insuficiente para saque de tal quantia.");
 
         this.balance -= amount;
     }
 
     private void withdrawFromSavings(double amount) throws Exception {
-        if (amount < 0) throw new Exception("");
-        if (amount > this.savingsBalance) throw new Exception("");
+        if (amount < 0) throw new Exception("Valor inválido. Somente valores positivos diferentes de 0 são válidos.");
+        if (amount > this.savingsBalance) throw new Exception("Quantia insuficiente na conta poupança para saque.");
 
         this.savingsBalance -= amount;
     }
 
     @Override
     public void deposit(double amount) throws Exception {
-        if (amount < 0) throw new Exception("");
+        if (amount < 0) throw new Exception("Valor inválido. Somente valores positivos diferentes de 0 são válidos.");
 
         this.savingsBalance += amount;
     }

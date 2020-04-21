@@ -5,7 +5,6 @@ import com.bank.accounts.SpecialAccount;
 import com.bank.accounts.StudentAccount;
 
 public class Main {
-
     public static void main(String[] args) throws Exception {
         SavingsAccount mySavingsAccount = new SavingsAccount(12345, "Cleberson Jr.", 500);
         System.out.println(mySavingsAccount.summarize());
@@ -26,7 +25,6 @@ public class Main {
 
         SpecialAccount mySpecialAccount = new SpecialAccount(12345, "Cleberson Jr.", 600);
         System.out.println(mySpecialAccount.summarize());
-        // mySpecialAccount.withdraw(20);
         mySpecialAccount.withdraw(750);
         mySpecialAccount.withdraw(800);
         System.out.println(mySpecialAccount.summarize());

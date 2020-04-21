@@ -7,7 +7,7 @@ public abstract class Account {
     protected double balance;
 
     public Account(int number, String name, double balance) throws Exception {
-        if (balance < 0) throw new Exception("");
+        if (balance < 0) throw new Exception("Impossível criar conta. (Saldo inicial deve ser maior que 0)");
 
         this.number = number;
         this.balance = balance;
@@ -17,7 +17,7 @@ public abstract class Account {
     public abstract void withdraw(double amount) throws Exception;
 
     public void deposit(double valor) throws Exception {
-        if (valor < 0) throw new Exception("");
+        if (valor < 0) throw new Exception("Valor inválido para depósito. Somente números positivos diferentes de 0 são válidos.");
 
         this.balance += valor;
     }
