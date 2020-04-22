@@ -16,13 +16,13 @@ public class SavingsAccount extends Account {
         this.withdrawFromSavings(amount);
     }
 
-    public void withdraw(String to, double amount) throws Exception {
-        if (to.equals("poupança")) {
+    public void withdraw(String from, double amount) throws Exception {
+        if (from.equals("poupança")) {
             this.withdrawFromSavings(amount);
             return;
         }
 
-        if (to.equals("corrente")) {
+        if (from.equals("corrente")) {
             this.withdrawFromBalance(amount);
             return;
         }
